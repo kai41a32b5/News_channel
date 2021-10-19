@@ -66,7 +66,7 @@ def main():
     channel_list = ['ctitv', 'setnews159', 'newsebc', 'TBSCTS', 'TVBS', 'eranewsupload', 'PNNPTS']
     username = channel_list[datetime.today().weekday()]
     update_videos(username, crawler_1)
-    #update_comments(username, crawler_2, crawler_3)
+    update_comments(username, crawler_2, crawler_3)
     sql.close()
 
 if __name__ == '__main__':
