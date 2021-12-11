@@ -13,7 +13,7 @@ from mysql import mysql
 
 def main():
     
-    username, password, ip, database = 'kai', 'Ss3745120', 'localhost', 'news'
+    username, password, ip, database = '*', '*', '*', '*'
     path = 'mysql+pymysql://{}:{}@{}/{}'.format(username, password, ip, database)
     engine = create_engine(path)
     con = engine.connect()
@@ -60,9 +60,9 @@ def main():
         print('idLIst: ',len(idList),'\n','updated: ',len(comment_list))
         sql.upsert(comments, comment_list)
 
-    crawler_1 = news_crawler((youtube_api('AIzaSyCrlFsn0hgELyxt2xKxSb7hRX_uT_wwB8I')))
-    crawler_2 = news_crawler(youtube_api('AIzaSyD_6LW8_Xh7PV5E8fqV4b4qYL1ShpdbwZ4'))
-    crawler_3 = news_crawler(youtube_api('AIzaSyD0tLLCgYs9VoyTYp5vgRbB_zrLLEqD6ok'))
+    crawler_1 = news_crawler((youtube_api('*')))
+    crawler_2 = news_crawler(youtube_api('*'))
+    crawler_3 = news_crawler(youtube_api('*'))
     channel_list = ['ctitv', 'setnews159', 'newsebc', 'TBSCTS', 'TVBS', 'eranewsupload', 'PNNPTS']
     username = channel_list[datetime.today().weekday()]
     update_videos(username, crawler_1)
